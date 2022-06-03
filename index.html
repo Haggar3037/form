@@ -6,45 +6,45 @@
         <title>Форма</title>
     </head>
     <body>
-        <button class="openFormButton">Форма</button>
+        <button class="open-form-button">Форма</button>
         <div class="formDiv">
             <form action="pushForm.php" method="POST"> 
                 <h3 class="form-title">Свободная путёвка</h3>
                 <p class="instruction">Укажите дату, продолжительность и кол-во гостей, мы подберём
                     оптимальную путёвку в этом или аналогичном санатории</p>
-                <div class=" input-wrapper">
-                    <p class="up-text">Дата заезда</p>
-                    <input type="text" name="timeForm">
+                <div class="input-wrapper">
+                    <label class="input-label" for="time-form">Дата заезда</label>
+                    <input type="text" name="time_form" id="time-form" class="input-window">
                 </div>
-                <div class=" input-wrapper">
-                    <p class="up-text">Продолжительность</p>
-                    <input type="text" name="durationForm">
+                <div class="input-wrapper">
+                    <label class="input-label" for="duration-form">Продолжительность</label>
+                    <input type="text" name="duration_form" id="duration-form" class="input-window">
                 </div>  
-                <div class=" input-wrapper">
-                    <p class="up-text">Сколько взрослых?</p>
+                <div class="input-wrapper" for="abult-form">
+                    <label class="input-label">Сколько взрослых?</label>
                     <img src="icon/man.png" alt="" class="icon-man">
-                    <input type="text" name="abultForm">
+                    <input type="text" name="abult_form" id="abult-form" class="input-window">
                 </div>
-                <div class=" input-wrapper">
-                    <p class="up-text">Сколько детей?</p>
-                    <input type="text" name="childForm">
+                <div class="input-wrapper">
+                    <label class="input-label" for="child-form">Сколько детей?</label>
+                    <input type="text" name="child_form" id="child-form" class="input-window">
                 </div>
-                <div class=" input-wrapper"> 
-                    <input type="text" name="phoneForm" class="phone-form">
+                <div class="input-wrapper"> 
+                    <input type="text" name="phone_form" class="phone-form input-window">
                 </div>
                 <div  class="name-form"> 
-                    <input type="text" name="nameForm">
+                    <input type="text" name="name_form" class="input-window">
                 </div>
-                <div class="checkbox">
-                    <div>
-                        <input type="checkbox" name="another-form" id="another-form" class="another-form">
+                <div class="checkbox-block">
+                    <div class="checkbox-block-element">
+                        <input type="checkbox" name="another_form" id="another-form" class="checkbox-input">
                         <label for="another-form">Рассмотрю другие санатории</label>
                     </div>
-                    <div>
-                        <input type="checkbox" name="news-form" id="news-form" class="news-form">
+                    <div class="checkbox-block-element">
+                        <input type="checkbox" name="news_form" id="news-form" class="checkbox-input">
                         <label for="news-form">Согласен получать информацию о новостях и скидках</label>
                     </div>
-                </div>
+                </div >
                 <div class="politic-button">
                     <button class="find-button">Найти</button>
                     <p>Нажимая «Найти», вы даёте согласие на обработку персональных данных 
