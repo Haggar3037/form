@@ -18,11 +18,15 @@ form {
     justify-content: space-around;
 }
 
-.input-wrapper  {
-    width: 25%;
+.input-wrapper-small {
+    width: 20%;
     text-align: center;
 }
 
+.input-wrapper-big {
+    width: 25%;
+    text-align: center;
+}
 
 .input-window {
     border-radius: 8px;
@@ -30,6 +34,7 @@ form {
     border-style: solid;
     height: 38px;
     box-shadow: none;
+    width: 90%;
 }
 
 .form-title {
@@ -61,22 +66,23 @@ form {
     font-size: 16px;
 }
 
-.name-form {
+.input-wrapper-name {
     width: 75%;
     display: flex;
 }
 
-.name-form input {
+.input-wrapper-name input {
     width: 100%;
 }
 
 .icon-man {
-    position: absolute;
+    margin:0 0 0 auto;
     width: 22px;
     height: 53px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    align-items: center;
 }
 
 .checkbox-block, .politic-button {
@@ -86,7 +92,6 @@ form {
 
 .checkbox-block-element {
     width: 100%;
-    display: flex;
 }
 
 
@@ -97,6 +102,7 @@ form {
     line-height: 140%;
     color: #252525;
     display: flex;
+    align-items: center;
 }
 
 
@@ -156,7 +162,6 @@ form {
 .checkbox-input + label:before {
 	content: '';
 	position: absolute;
-	top: 0px;
 	left: 0;
 	width: 34px;
 	height: 20px;
@@ -168,7 +173,6 @@ form {
 .checkbox-input + label:after {
 	content: '';
 	position: absolute;
-	top: 0;
 	left: 2px;
 	width: 18px;
 	height: 18px;
