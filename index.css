@@ -1,0 +1,186 @@
+
+form {
+    padding: 0 60px 0 60px;
+    border: solid;
+    border-width: 40px;
+    border-color: #00AAEF;
+    border-radius: 10px;
+    max-width: 840px;
+    min-height: 480px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.input-wrapper  {
+    width: 25%;
+}
+
+
+form input {
+    border-radius: 8px;
+    border-color: #D7D7D7;
+    border-style: solid;
+    height: 38px;
+    box-shadow: none;
+}
+
+.form-title {
+    color: #007FCC;
+    margin: 30px auto 0 auto;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 150%;
+    height: 40px;
+}
+
+.instruction {
+    font-family: Segoe UI;
+    opacity: 0.5;
+    color: #252525;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0 10% 0 10%;
+}
+
+.up-text {
+    font-family: Segoe UI;
+    opacity: 0.5;
+    color: #252525;
+    font-weight: 350;
+    font-size: 16px;
+}
+
+.name-form {
+    width: 75%;
+    display: flex;
+}
+
+.name-form input {
+    width: 100%;
+}
+
+.icon-man {
+    position: absolute;
+    width: 22px;
+    height: 53px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checkbox, .politic-button {
+    max-width: 340px;
+    width: 50%;
+}
+
+.checkbox div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox label{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 16px;
+    line-height: 140%;
+    color: #252525;
+}
+
+.find-button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(270deg, #007FCC 0%, #00AAEF 100%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #bfbfbf;
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.find-button:hover {
+    box-shadow: 0px 4px 4px #7e7e7e;
+    transition: all 200ms ease;
+}
+
+.politic-button p {
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 10px;
+    line-height: 160%;
+    text-align: right;
+    color: #252525;
+}
+
+.politic-button a {
+    color: #007FCC;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Тоглер*/
+.news-form, .another-form {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.news-form + label, .another-form +label {
+	position: relative;
+	padding: 0 0 0 40px;
+	cursor: pointer;
+}
+
+.news-form + label:before, .another-form + label:before {
+	content: '';
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 34px;
+	height: 20px;
+	border-radius: 13px;
+	background: #CDD1DA;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+	transition: .2s;
+}
+.news-form + label:after, .another-form + label:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 2px;
+	width: 17px;
+	height: 17px;
+	border-radius: 10px;
+	background: #ffffff;
+	transition: .2s;
+}
+.news-form:checked + label:before, .another-form:checked + label:before {
+	background: #ffffff;
+}
+.news-form:checked + label:after, .another-form:checked + label:after {
+	left: 16px;
+    background: linear-gradient(#1afa2d, #4787ff);
+}
