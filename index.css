@@ -2,7 +2,17 @@ body {
     font-family: 'Segoe UI';
 }
 
+.formDiv {
+    position: absolute;
+    border: solid;
+    border-width: 0;
+    border-radius: 10px;
+}
+
 form {
+    border-width: 0;
+    border-radius: 10px;
+    background-color: #ffffff;
     max-width: 840px;
     min-height: 450px;
     width: 100%;
@@ -15,20 +25,23 @@ form {
 
 
 @media only screen and (max-width: 768px) {
+    .formDiv {
+        padding: 15px;
+        background-color: #00AAEF;
+    }
+
     form {
         padding: 0 20px 30px 20px;
-        border: solid;
-        border-width: 15px;
-        border-color: #00AAEF;
-        border-radius: 10px;
     }
 
     .input-wrapper-small, .input-wrapper-time {
-        width: 50%;
+        width: 49%;
+        margin: 0 0.5% 0 0.5%;
     }
     
     .input-wrapper-big, .input-wrapper-name {
-        width: 100%;
+        width: 99%;
+        margin: 0 0.5% 0 0.5%;
     }
     .icon-man {
         display: none;
@@ -61,18 +74,21 @@ form {
 
 
 @media only screen and (min-width: 768px) {
+    .formDiv {
+        padding: 40px;
+        background-color: #00AAEF;
+    }
+
     form {
         padding: 0 60px 30px 60px;
-        border: solid;
-        border-width: 40px;
-        border-color: #00AAEF;
-        border-radius: 10px;
     }
     .input-wrapper-small {
-        width: 21%;
+        width: 20%;
+        margin: 0 0.5% 0 0.5%;
     }
     .input-wrapper-big, .input-wrapper-time {
-        width: 25%;
+        width: 24%;
+        margin: 0 0.5% 0 0.5%;
     }
     .icon-man {
         margin:0 0 0 auto;
@@ -86,8 +102,8 @@ form {
     }
 
     .input-wrapper-name {
-        width: 73%;
-        margin-right: 2%;
+        width: 74%;
+        margin: 0 0.5% 0 0.5%;
     }
 
     .input-wrapper-name input {
@@ -126,8 +142,9 @@ form {
     border-style: solid;
     height: 38px;
     box-shadow: none;
-    width: 90%;
+    width: 100%;
     margin-top: 5px;
+    box-sizing: border-box;
 }
 
 
@@ -162,7 +179,7 @@ form {
 }
 
 .icon-time {
-    top: 42px;
+    top: 38px;
     right: 10%;
     display: block;
     position: absolute;
@@ -180,7 +197,7 @@ form {
 
 
 .icon-duration, .icon-abult, .icon-child {
-    top: 40px;
+    top: 35px;
     right: 10%;
     background-image: url(icon/open_list.svg);
     display: block;
@@ -249,16 +266,6 @@ form {
     text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-/*Тоглер*/
 .checkbox-input {
 	position: absolute;
 	opacity: 0;
