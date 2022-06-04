@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
         <link rel="stylesheet" href="index.css">
         <title>Форма</title>
@@ -12,39 +13,43 @@
                 <h3 class="form-title">Свободная путёвка</h3>
                 <p class="instruction">Укажите дату, продолжительность и кол-во гостей, мы подберём
                     оптимальную путёвку в этом или аналогичном санатории</p>
-                <div class="input-wrapper-big">
+                <div class="input-wrapper-time">
                     <label class="input-label" for="time-form">Дата заезда</label>
-                    <input type="text" name="time_form" id="time-form" class="input-window input-window-big">
+                    <input type="text" name="time" id="time-form" class="input-window">
+                    <img src="icon/dot.png" alt="" class="icon-time">
                 </div>
                 <div class="input-wrapper-small">
                     <label class="input-label" for="duration-form">Продолжительность</label>
-                    <input type="text" name="duration_form" id="duration-form" class="input-window">
+                    <input type="text" name="duration" id="duration-form" class="input-window">
+                    <i class="icon-duration"></i>
                 </div>  
                 <img src="icon/man.png" alt="" class="icon-man">
                 <div class="input-wrapper-small">
                     <label class="input-label"  for="abult-form">Сколько взрослых?</label>
-                    <input type="text" name="abult_form" id="abult-form" class="input-window">
+                    <input type="text" name="abult" id="abult-form" class="input-window">
+                    <i class="icon-abult"></i>
                 </div>
                 <div class="input-wrapper-small">
                     <label class="input-label" for="child-form">Сколько детей?</label>
-                    <input type="text" name="child_form" id="child-form" class="input-window">
+                    <input type="text" name="child" id="child-form" class="input-window">
+                    <i class="icon-child"></i>
                 </div>
                 <div class="input-wrapper-big"> 
-                    <input type="text" name="phone_form" class="phone-form input-window">
+                    <input type="text" name="phone" class="phone-form input-window">
                 </div>
                 <div  class="input-wrapper-name"> 
-                    <input type="text" name="name_form" class="input-window">
+                    <input type="text" name="name" class="input-window">
                 </div>
                 <div class="checkbox-block">
                     <div class="checkbox-block-element">
-                        <input type="checkbox" name="another_form" id="another-form" class="checkbox-input">
+                        <input type="checkbox" name="another" id="another-form" class="checkbox-input">
                         <label for="another-form">Рассмотрю другие санатории</label>
                     </div>
                     <div class="checkbox-block-element">
-                        <input type="checkbox" name="news_form" id="news-form" class="checkbox-input">
+                        <input type="checkbox" name="news" id="news-form" class="checkbox-input">
                         <label for="news-form">Согласен получать информацию о новостях и скидках</label>
                     </div>
-                </div >
+                </div > 
                 <div class="politic-button">
                     <button class="find-button">Найти</button>
                     <p>Нажимая «Найти», вы даёте согласие на обработку персональных данных 
