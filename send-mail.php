@@ -7,11 +7,7 @@ if ($_POST['news']){
 $another = 'нет';
 if ($_POST['another']){
     $another = 'да';
-}
-
-$name = htmlspecialchars($name);
-$name = urldecode($name);
-$name = trim($name);    
+}   
 
 $body = "Форма";
 
@@ -38,9 +34,7 @@ $body.='\n Хочу посмотреть другие варианты: '. $anot
 
 
 
-
-
-$result = mail("f0682399@vilir.from.sh", "Тестовое письмо", $body, "From: haggar3037@gmail.com \r\n");
+$result = mail("haggar3037@gmail.com", "Тестовое письмо", $body, "From: f0682399@vilir.from.sh \r\n");
 
 
 if ($result) {
