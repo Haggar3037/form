@@ -1,11 +1,14 @@
 <?php  
 
-$mail->addAddress('haggar3037@gmail.com');
+
+
+$mail->addAddress('haggar3037@gmail.com');  
 
 $news = нет;
 if ($_POST['news']){
     $news = да;
 }
+
 $another = нет;
 if ($_POST['another']){
     $another = да;
@@ -36,7 +39,6 @@ if(trim(!empty($_POST['another']))){
 $body.='<p><strong>Хочу посмотреть другие варианты:</strong> ' . $another . '</p>';
 }
 
-die($body); 
 
 $mail->Body = $body;
 
@@ -45,10 +47,6 @@ if (!$mail->send()) {
 } else {
     $message = 'Данные отпралены';
 }
-
-
-die($mail); 
-
 
 $response = ['message' => $message];
 
