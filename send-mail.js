@@ -11,7 +11,7 @@ async function formSend(e) {
     let formData = new FormData(form); 
     if (error === 0) {
         form.classList.add('js-sending');
-        let response = await fetch('push-mail.php', {
+        let response = await fetch('send-mail.php', {
             method: 'POST',
             body: formData
         }); 

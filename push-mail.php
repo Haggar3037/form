@@ -62,8 +62,6 @@ if (!$mail->send()) {
 
 $response = ['message' => $message];
 
-die($response); 
-echo ($response);
 header('Content-type: application/json');
 echo json_encode($response);
 ?>
