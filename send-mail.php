@@ -16,38 +16,31 @@ $name = trim($name);
 $body = "Форма";
 
 if(trim(!empty($_POST['name']))){
-$body.='\n Имя: '. $_POST['name'];
+    $body.='\n Имя: '. $_POST['name'];
 }
 if(trim(!empty($_POST['time']))){
-$body.='\n Дата: '. $_POST['time'];
+    $body.='\n Дата: '. $_POST['time'];
 }
 if(trim(!empty($_POST['duration']))){
-$body.='\n Длительность: '. $_POST['duration'];
+    $body.='\n Длительность: '. $_POST['duration'];
 }
 if(trim(!empty($_POST['abult']))){
-$body.='\n Взрослые: '. $_POST['abult']; 
+    $body.='\n Взрослые: '. $_POST['abult']; 
 }
 if(trim(!empty($_POST['child']))){
-$body.='\n Дети: '. $_POST['child'];
+    $body.='\n Дети: '. $_POST['child'];
 }
 if(trim(!empty($_POST['phone']))){
-$body.='\n Телефон: '. $_POST['phone'];
+    $body.='\n Телефон: '. $_POST['phone'];
 }
-if(trim(!empty($_POST['news']))){
 $body.='\n Хочу получать ноости: '. $news;
-}
-if(trim(!empty($_POST['another']))){
 $body.='\n Хочу посмотреть другие варианты: '. $another;
-}
 
 
-$ansver = $body;
 
 
-print_r($body);
-print_r("-----------------------------------------");
 
-$result = mail("f0682399@vilir.from.sh", "Тестовое письмо", $ansver, "From: haggar3037@gmail.com \r\n");
+$result = mail("f0682399@vilir.from.sh", "Тестовое письмо", $body, "From: haggar3037@gmail.com \r\n");
 
 
 if ($result) {
