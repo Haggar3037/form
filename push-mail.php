@@ -1,21 +1,6 @@
 <?php  
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-
-$mail = new PHPMailer(true);
-$mail->CharSet = 'UTF-8'; 
-$mail->setLanguage('ru', 'PHPMailer/language');
-$mail->IsHtml(true);
-
-$mail->setForm('f0682399@vilir.from.sh', 'Тестироание');
 
 $mail->addAddress('haggar3037@gmail.com');
-
-$mail->Subject = 'Отпрака формы';
-
 
 $news = нет;
 if ($_POST['news']){
@@ -51,6 +36,7 @@ if(trim(!empty($_POST['another']))){
 $body.='<p><strong>Хочу посмотреть другие варианты:</strong> ' . $another . '</p>';
 }
 
+die($body); 
 
 $mail->Body = $body;
 
@@ -60,8 +46,14 @@ if (!$mail->send()) {
     $message = 'Данные отпралены';
 }
 
+
+die($mail); 
+
+
 $response = ['message' => $message];
 
+die($response); 
+echo ($response);
 header('Content-type: application/json');
 echo json_encode($response);
 ?>

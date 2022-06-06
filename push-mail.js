@@ -15,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (error === 0) {
             form.classList.add('js-sending');
             let response = await fetch('push-mail.php', {
-                metod: 'POST',
+                method: 'POST',
                 body: formData
+                
             }); 
+            console.log (response);
             if (response.ok){
                 let result = await response.json();
                 alert(result.message);

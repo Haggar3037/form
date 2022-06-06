@@ -8,14 +8,26 @@ async function formSend(e) {
 
     let error = formValidate(form);
 
-    let formData = new FormData(form);
-
+    let formData = new FormData(form); 
     if (error === 0) {
         form.classList.add('js-sending');
-        form.submit();
+        let response = await fetch('push-mail.php', {
+            method: 'POST',
+            body: formData
+        }); 
+        console.log(response);
+        if (response.ok){
+            let result = await response.json();
+            console.log(result.message);
+            console.log(result.message);
+            form.classList.remove('js-sending');
+        } else {
+            console.log ("Ошибка");
+            form.classList.remove('js-sending');
+        }
         setTimeout(form.classList.remove('js-sending'), 1000);
     } else {
-        alert("Все поля обязательны для заполнения");
+        console.log("Все поля обязательны для заполнения");
     }
 };
 

@@ -95,11 +95,11 @@ form * {
     }
     
     .input-wrapper-phone, .input-wrapper-small,  .input-wrapper-time, .input-wrapper-little, .input-wrapper-name {
-        padding-top: 20px;
+        padding-top: 40px;
     }
 
     .input-wrapper-phone, .input-wrapper-name {
-        width: 99%;
+        width: 98%;
     }
 
     .icon-man {
@@ -133,6 +133,11 @@ form * {
     
     .input-label {
         font-size: 14px;
+        top: 15px;
+        padding-left: 8%;
+    }
+    .input-time::-webkit-calendar-picker-indicator {
+        top: 60px;
     }
 
 }
@@ -197,6 +202,14 @@ form * {
         width: 25%;
     }
 
+    .input-wrapper-name {
+        width: 71%;
+    }
+
+    .input-wrapper-name input {
+        width: 100%;
+    }
+
     .icon-man {
         margin:0 0 0 auto;
         padding:15px 10px 0 0;
@@ -208,13 +221,6 @@ form * {
         align-items: center;
     }
 
-    .input-wrapper-name {
-        width: 71%;
-    }
-
-    .input-wrapper-name input {
-        width: 100%;
-    }
 
     .checkbox-block, .politic-button {
         max-width: 340px;
@@ -232,8 +238,14 @@ form * {
     }
 
     .input-label {
+        top:-10px;
         font-size: 16px;
+        padding-left: 8%;
     }
+    .input-time::-webkit-calendar-picker-indicator {
+        top: 41px;
+    }
+    
 }
 
 .close-form-button::before {
@@ -270,7 +282,6 @@ form * {
 .input-time::-webkit-calendar-picker-indicator {
     display: block;
     position: absolute;
-    top: 41px;
     background: url(icon/dot.png) no-repeat;
     right: 4%;
 }
@@ -345,13 +356,11 @@ form * {
 }
 
 .input-label {
-    top:-10px;
     position: absolute;
     opacity: 0.5;
     color: #252525;
     font-weight: 350;
     white-space: nowrap;
-    padding-left: 8%;
 }
 
 .checkbox-block-element {
