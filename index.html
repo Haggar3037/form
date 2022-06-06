@@ -7,38 +7,86 @@
         <title>Форма</title>
     </head>
     <body>
-        <button class="open-form-button">Форма</button>
-        <div class="formDiv">
-            <form action="pushForm.php" method="POST"> 
-                <h3 class="form-title">Свободная путёвка</h3>
+        <div class="js-dark dark"></div>  <!-- invisible отключен для отладки-->
+        <button class="js-open-form-button">Форма</button>
+        <div class="form-div js-visibility"> <!-- invisible отключен для отладки-->
+            <button class="js-close-form-button close-form-button">
+                <span>
+                    Закрыть
+                </span>
+            </button>
+            <form action="send-mail.php" method="POST" id="form"> 
+                <h3 class="form-title">Свободная путевка</h3>
                 <p class="instruction">Укажите дату, продолжительность и кол-во гостей, мы подберём
                     оптимальную путёвку в этом или аналогичном санатории</p>
                 <div class="input-wrapper-time">
                     <label class="input-label" for="time-form">Дата заезда</label>
-                    <input type="text" name="time" id="time-form" class="input-window">
-                    <img src="icon/dot.png" alt="" class="icon-time">
+                    <input type="date" name="time" id="time-form" class="input-window input-time js-input-time js-formRequired" 
+                     min="2022-06-05" max="2030-12-31">
                 </div>
                 <div class="input-wrapper-small">
                     <label class="input-label" for="duration-form">Продолжительность</label>
-                    <input type="text" name="duration" id="duration-form" class="input-window">
-                    <i class="icon-duration"></i>
+                    <select name="duration" id="duration-form" class="input-window select-list">
+                        <option>1 день</option>
+                        <option>2 дня</option>
+                        <option>3 дня</option>
+                        <option>4 дня</option>
+                        <option>5 дней</option>
+                        <option>6 дней</option>
+                        <option>7 дней</option>
+                        <option>8 дней</option>
+                        <option>9 дней</option>
+                        <option>10 дней</option>
+                        <option>11 дней</option>
+                        <option>12 дней</option>
+                        <option>13 дней</option>
+                        <option>14 дней</option>
+                        <option>15 дней</option>
+                        <option>16 дней</option>
+                        <option>17 дней</option>
+                        <option>18 дней</option>
+                        <option>19 дней</option>
+                        <option>20 дней</option>
+                        <option>21 день</option>
+                    </select>
                 </div>  
                 <img src="icon/man.png" alt="" class="icon-man">
                 <div class="input-wrapper-small">
                     <label class="input-label"  for="abult-form">Сколько взрослых?</label>
-                    <input type="text" name="abult" id="abult-form" class="input-window">
-                    <i class="icon-abult"></i>
+                    <select name="abult" id="abult-form" class="input-window select-list">
+                        <option>1 взрослый</option>
+                        <option>2 взрослых</option>
+                        <option>3 взрослых</option>
+                        <option>4 взрослых</option>
+                        <option>5 взрослых</option>
+                        <option>6 взрослых</option>
+                        <option>7 взрослых</option>
+                        <option>8 взрослых</option>
+                        <option>9 взрослых</option>
+                        <option>10 взрослых</option>
+                    </select>
                 </div>
-                <div class="input-wrapper-small">
+                <div class="input-wrapper-little">
                     <label class="input-label" for="child-form">Сколько детей?</label>
-                    <input type="text" name="child" id="child-form" class="input-window">
-                    <i class="icon-child"></i>
+                    <select name="child" id="child-form" class="input-window select-list">
+                        <option>0</option>
+                        <option>1 ребёнок</option>
+                        <option>2 ребёнка</option>
+                        <option>3 ребёнка</option>
+                        <option>4 ребёнка</option>
+                        <option>5 детей</option>
+                        <option>6 детей</option>
+                        <option>7 детей</option>
+                        <option>8 детей</option>
+                        <option>9 детей</option>
+                        <option>10 детей</option>
+                    </select>
                 </div>
-                <div class="input-wrapper-big"> 
-                    <input type="text" name="phone" class="phone-form input-window">
+                <div class="input-wrapper-phone"> 
+                    <input type="text" name="phone" class="input-window phone-form js-formRequired" placeholder="+7 (___) ___ ____">
                 </div>
                 <div  class="input-wrapper-name"> 
-                    <input type="text" name="name" class="input-window">
+                    <input type="text" name="name" class="input-window name-form js-formRequired" placeholder="ФИО">
                 </div>
                 <div class="checkbox-block">
                     <div class="checkbox-block-element">
@@ -51,7 +99,7 @@
                     </div>
                 </div > 
                 <div class="politic-button">
-                    <button class="find-button">Найти</button>
+                    <button class="find-button js-find-button" type="submit">Найти</button>
                     <p>Нажимая «Найти», вы даёте согласие на обработку персональных данных 
                         в соответствии с <a href="https://www.google.com/">политикой конфиденциальности</a></p>
                 </div>
@@ -59,4 +107,6 @@
         </div>
     </body> 
 </html>
-<script src="openForm.js" ></script>
+<script src="open-form.js"></script>
+<script src="mask-phone.js"></script>
+<script src="push-mail.js"></script>

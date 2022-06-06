@@ -2,94 +2,201 @@ body {
     font-family: 'Segoe UI';
 }
 
-.formDiv {
+.dark {
+    left: 0;
+    top: 0;
     position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #000000;
+    opacity: 0.5;
+}
+
+.invisible {
+    display: none;
+}
+
+.form-div {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    max-width: 1040px;
+    width: 100%;
+    transform: translate(-50%,-50%);
     border: solid;
     border-width: 0;
     border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #00aaff;
+    border-radius: 10px;
+    border-width: 0;
 }
 
+
 form {
+    min-height: 450px;
     border-width: 0;
     border-radius: 10px;
-    background-color: #ffffff;
-    max-width: 840px;
-    min-height: 450px;
-    width: 100%;
-    height: 100%;
+    background-color: #ffffff;  
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     justify-content: space-around;
 }
 
+form * {
+    outline: none;
+}
 
 @media only screen and (max-width: 768px) {
-    .formDiv {
+    .close-form-button {
+        right: 0;
+        top: 0;
+        position: absolute;
+        display: inline-block;
+        background: none;
+        width: 50px;
+        padding: 8px;
+        color: #000000;
+        border: 0;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        opacity: 1;
+    }
+    .close-form-button span {
+        display: none;
+    }
+
+    .close-form-button::before, .close-form-button::after {
+        content: '';
+        position: absolute;
+        right: 30px;
+        top: 40px;
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #007FCC;
+    }
+
+
+    .form-div {
         padding: 15px;
-        background-color: #00AAEF;
     }
 
     form {
         padding: 0 20px 30px 20px;
     }
 
-    .input-wrapper-small, .input-wrapper-time {
-        width: 49%;
-        margin: 0 0.5% 0 0.5%;
+    .input-wrapper-small, .input-wrapper-time, .input-wrapper-little {
+        width: 48%;
     }
     
-    .input-wrapper-big, .input-wrapper-name {
-        width: 99%;
-        margin: 0 0.5% 0 0.5%;
+    .input-wrapper-phone, .input-wrapper-small,  .input-wrapper-time, .input-wrapper-little, .input-wrapper-name {
+        padding-top: 20px;
     }
+
+    .input-wrapper-phone, .input-wrapper-name {
+        width: 99%;
+    }
+
     .icon-man {
         display: none;
     }
+
     .checkbox-block {
         width: 100%;
         margin: 15px 0 15px 0;
     }
+
     .checkbox-block-element {
         margin-top: 15px;
     }
+
     .politic-button {
         max-width: 340px;
         width: 100%;
     }
+
     .instruction {
         font-size: 14px;
-        max-width: 500px;
-        padding: 0 5% 0 5%;
+        padding: 0 5%;
+        line-height: 180%;
     }
+
     .form-title {
         font-size: 20px;
         
     }
+    
     .input-label {
         font-size: 14px;
     }
 
 }
 
+@media only screen and (max-width: 860px){
+    form {
+        padding: 0 5% 2% 5%;
+
+    }
+}
+@media only screen and (min-width: 860px){
+    form {
+        padding: 0 50px 30px 50px;
+    }
+}
 
 @media only screen and (min-width: 768px) {
-    .formDiv {
-        padding: 40px;
-        background-color: #00AAEF;
+    .close-form-button {
+        right: 20px;
+        top: -40px;
+        position: absolute;
+        display: inline-block;
+        background: none;
+        width: 50px;
+        padding: 8px;
+        color: #FFFFFF;
+        border: 0;
+        text-align: center;
+        outline: none;
+        text-decoration: none;
+        opacity: 0.5;
     }
 
-    form {
-        padding: 0 60px 30px 60px;
+    .close-form-button::before, .close-form-button::after {
+        content: '';
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #ffffff;
     }
+
+    .form-div {
+        padding: 40px;
+    }
+
     .input-wrapper-small {
-        width: 20%;
-        margin: 0 0.5% 0 0.5%;
+        width: 20.5%;
     }
-    .input-wrapper-big, .input-wrapper-time {
-        width: 24%;
-        margin: 0 0.5% 0 0.5%;
+
+    .input-wrapper-little {
+        width: 18.5%;
     }
+
+    .input-wrapper-phone, .input-wrapper-small,  .input-wrapper-time, .input-wrapper-name, .input-wrapper-little {
+        padding-top: 20px;
+    }
+
+    .input-wrapper-phone, .input-wrapper-time {
+        width: 25%;
+    }
+
     .icon-man {
         margin:0 0 0 auto;
         padding:15px 10px 0 0;
@@ -102,8 +209,7 @@ form {
     }
 
     .input-wrapper-name {
-        width: 74%;
-        margin: 0 0.5% 0 0.5%;
+        width: 71%;
     }
 
     .input-wrapper-name input {
@@ -114,38 +220,109 @@ form {
         max-width: 340px;
         width: 50%;
     }
+
     .instruction {
         font-size: 18px;
-        padding: 0 10% 0 10%;
+        max-width: 730px;
+        line-height: 180%;
     }
+
     .form-title {
         font-size: 35px;
     }
+
     .input-label {
         font-size: 16px;
     }
 }
 
-
-
-.input-wrapper-small {
-    position: relative;
+.close-form-button::before {
+    transform: rotate(45deg);
+    transition: all 200ms ease;
 }
 
-.input-wrapper-big {
+.close-form-button::after {
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+}
+
+.close-form-button:hover::before {
+    transform: rotate(-90deg);
+    transition: all 200ms ease;
+    opacity: 0;
+}
+
+.close-form-button:hover::after  {
+    transform: rotate(0deg);
+    transition: all 200ms ease;
+    box-shadow: 0 0 5px 1px #ff2222;
+}
+
+
+.select-list {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background: url(icon/open_list.svg) no-repeat right; 
+    background-position: 90% 10px;  
+}
+
+
+.input-time::-webkit-calendar-picker-indicator {
+    display: block;
+    position: absolute;
+    top: 41px;
+    background: url(icon/dot.png) no-repeat;
+    right: 4%;
+}
+
+.input-time::-webkit-calendar-picker-indicator:hover {
+    border-color: #00AAEF;
+    border-width: 1px;
+    border-radius: 2px;
+    box-shadow: inset 0 0 2px 0px rgba(0, 127, 204, 0.3), 0 0 2px 0px rgba(0, 127, 204, 0.5);
+    transition: 400ms ease;
+}
+
+.input-wrapper-small, .input-wrapper-phone, .input-wrapper-time, .input-wrapper-little {
+    margin: 0 0.7%;
     position: relative;
 }
 
 .input-window {
-    border-radius: 8px;
+    border-radius: 10px;
     border-color: #D7D7D7;
     border-style: solid;
-    height: 38px;
+    height: 44px;
+    border-width: 1px;
     box-shadow: none;
+    padding:0 5%;
     width: 100%;
     margin-top: 5px;
     box-sizing: border-box;
+    font-weight: 400;
+    font-size: 18px;
 }
+
+.input-window:focus {
+    box-shadow: 0 0 7px 1px #D7D7D7;
+
+}
+.error {
+    box-shadow: 0 0 7px 1px #ff0000;
+}
+
+.name-form::placeholder{
+    opacity: 0.5;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.phone-form::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: #252525;
+}
+
 
 
 .form-title {
@@ -158,63 +335,24 @@ form {
 }
 
 .instruction {
-    font-family: Segoe UI;
     opacity: 0.5;
     color: #252525;
     text-align: center;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     font-weight: 400;
+    margin-bottom: 35px;
+    margin-top: 10px;
 }
 
 .input-label {
-    font-family: Segoe UI;
+    top:-10px;
+    position: absolute;
     opacity: 0.5;
     color: #252525;
     font-weight: 350;
-    padding-left: 15px;
+    white-space: nowrap;
+    padding-left: 8%;
 }
-
-.input-wrapper-time{
-    position: relative;
-}
-
-.icon-time {
-    top: 38px;
-    right: 10%;
-    display: block;
-    position: absolute;
-    transition: 200ms ease;
-}
-
-
-.icon-time:hover {
-    border-color: #00AAEF;
-    border-width: 1px;
-    border-radius: 2px;
-    box-shadow: inset 0 0 2px 0px rgba(0, 127, 204, 0.3), 0 0 2px 0px rgba(0, 127, 204, 0.5);
-    transition: 400ms ease;
-}
-
-
-.icon-duration, .icon-abult, .icon-child {
-    top: 35px;
-    right: 10%;
-    background-image: url(icon/open_list.svg);
-    display: block;
-    position: absolute;
-    width: 11px;
-    height: 19px;
-    transition: 200ms ease;
-}
-
-.icon-duration:hover, .icon-abult:hover, .icon-child:hover {
-    border-color: #00AAEF;
-    border-width: 1px;
-    border-radius: 2px;
-    box-shadow: inset 0 0 2px 0px rgba(0, 127, 204, 0.3), 0 0 2px 0px rgba(0, 127, 204, 0.5);
-    transition: 400ms ease;
-}
-
 
 .checkbox-block-element {
     width: 100%;
@@ -243,15 +381,42 @@ form {
     font-weight: 700;
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: 200ms;
 }
 
 .find-button:hover {
     box-shadow: 0px 4px 4px #7e7e7e;
-    transition: all 200ms ease;
+    transition: 200ms;
 }
+
+.find-button:active {
+    box-shadow: 0 0 4px 2px #4edfff;
+}
+
+.sending {
+    animation-iteration-count:infinite;
+    animation-duration: 500ms;
+    animation-name: waiting;
+}
+@keyframes waiting {
+    0% {
+        box-shadow: 2px 2px 4px 1px #ffffff;
+    }
+    25% {
+        box-shadow: 2px -2px 4px 1px #ffffff;
+    }
+    50% {
+        box-shadow: -2px -2px 4px 1px #ffffff;
+    }
+    75% {
+        box-shadow: -2px 2px 4px 1px #ffffff;
+    }
+    100% {
+        box-shadow: 2px 2px 4px 1px #ffffff;
+    }
+  }
 
 .politic-button p {
     font-weight: 350;
@@ -270,6 +435,7 @@ form {
 	position: absolute;
 	opacity: 0;
 }
+
 .checkbox-input + label {
 	position: relative;
 	padding: 0 0 0 40px;
@@ -287,6 +453,7 @@ form {
 	box-shadow: inset 0 0 0 1px #E8E8E8;
 	transition: .2s;
 }
+
 .checkbox-input + label:after {
 	content: '';
 	position: absolute;
