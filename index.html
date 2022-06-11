@@ -3,13 +3,14 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="stylesheet" href="styles/datepicker.min.css">
         <title>Форма</title>
     </head>
     <body>
-        <div class="js-dark dark"></div>  <!-- invisible отключен для отладки-->
+        <div class="js-dark dark invisible"></div> 
         <button class="js-open-form-button">Форма</button>
-        <div class="form-div js-visibility"> <!-- invisible отключен для отладки-->
+        <div class="form-div js-visibility invisible">
             <button class="js-close-form-button close-form-button">
                 <span>
                     Закрыть
@@ -19,12 +20,11 @@
                 <h3 class="form-title">Свободная путевка</h3>
                 <p class="instruction">Укажите дату, продолжительность и кол-во гостей, мы подберём
                     оптимальную путёвку в этом или аналогичном санатории</p>
-                <div class="input-wrapper-time">
+                <div class="input-wrapper-time input-wrapper">
                     <label class="input-label" for="time-form">Дата заезда</label>
-                    <input type="date" name="time" id="time-form" class="input-window input-time js-input-time js-formRequired" 
-                     min="2022-06-05" max="2030-12-31">
+                    <input placeholder="__-__-____" type="text" name="time" id="time-form" class="input-window input-time js-input-time js-formRequired" data-mask="date">
                 </div>
-                <div class="input-wrapper-small">
+                <div class="input-wrapper-duration input-wrapper">
                     <label class="input-label" for="duration-form">Продолжительность</label>
                     <select name="duration" id="duration-form" class="input-window select-list">
                         <option>1 день</option>
@@ -51,7 +51,7 @@
                     </select>
                 </div>  
                 <img src="icon/man.png" alt="" class="icon-man">
-                <div class="input-wrapper-small">
+                <div class="input-wrapper-abult input-wrapper">
                     <label class="input-label"  for="abult-form">Сколько взрослых?</label>
                     <select name="abult" id="abult-form" class="input-window select-list">
                         <option>1 взрослый</option>
@@ -66,7 +66,7 @@
                         <option>10 взрослых</option>
                     </select>
                 </div>
-                <div class="input-wrapper-little">
+                <div class="input-wrapper-child input-wrapper">
                     <label class="input-label" for="child-form">Сколько детей?</label>
                     <select name="child" id="child-form" class="input-window select-list">
                         <option>0</option>
@@ -82,10 +82,10 @@
                         <option>10 детей</option>
                     </select>
                 </div>
-                <div class="input-wrapper-phone"> 
-                    <input type="text" name="phone" class="input-window phone-form js-formRequired" placeholder="+7 (___) ___ ____">
+                <div class="input-wrapper-phone input-wrapper"> 
+                    <input type="text" name="phone" class="input-window phone-form js-formRequired" placeholder="+7 (___) ___ ____" data-mask="phone">
                 </div>
-                <div  class="input-wrapper-name"> 
+                <div  class="input-wrapper-name input-wrapper"> 
                     <input type="text" name="name" class="input-window name-form js-formRequired" placeholder="ФИО">
                 </div>
                 <div class="checkbox-block">
@@ -105,8 +105,12 @@
                 </div>
             </form>
         </div> 
+<script src="js/open-form.js"></script>
+<script src="js/send-mail.js"></script>
+<script src="js/plugins/imask.js"></script>
+<script src="js/plugins/plugins-main.js"></script>
+<script src="js/plugins/datepicker.min.js"></script>
     </body> 
 </html>
-<script src="open-form.js"></script>
-<script src="mask-phone.js"></script>
-<script src="send-mail.js"></script>
+
+
